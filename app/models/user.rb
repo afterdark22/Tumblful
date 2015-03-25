@@ -4,6 +4,10 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :follows
+  # Add this line to link Users to ImageLinks
+  has_many :image_links
+
+  # Rest of class omitted
 
   validates :name, :presence => true
   validates :username, :presence => true, :uniqueness => true
