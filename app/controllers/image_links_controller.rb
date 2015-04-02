@@ -1,6 +1,8 @@
 class ImageLinksController < ApplicationController
   
   def index
+    @image_links = ImageLink.all
+  end
   end
   
   def image_links
@@ -30,7 +32,7 @@ def create
       redirect_to image_links_path
     else
       @errors = @image_links_path
-      render: new
+      render :new
 
 end
 
@@ -56,6 +58,8 @@ end
   private
   def image_link_params
     params.require(:image_link).permit(:url, :title)
-  end
-  
+ 
 end
+end
+end
+

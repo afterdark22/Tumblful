@@ -1,3 +1,12 @@
-<% @text_posts.each do |text_post| %>
-<%= content_tag :p, text_post %>
-<% end %>
+<div>
+  <% @text_posts.each do |textpost| %>
+    <%= div_for textpost do %>
+      ..............
+      ..............
+      <p>
+        <%= link_to "Show", text_post_path(textpost) %> |
+        <%= link_to "Back", text_posts_path %>
+      </p>
+    <% end %>
+  <% end %>
+</div>

@@ -4,14 +4,14 @@ class TextPostsController < ApplicationController
   def index
     @text_posts = TextPost.all
   end
-
+end
   def show
     @text_post = TextPost.find(params[:id])
     
   end
 
   def new
-
+    @text_post = TextPost.new
   end
 
   def edit
@@ -56,6 +56,7 @@ end
   end
 
 end
+
 
   
  
