@@ -1,0 +1,4 @@
+<p> <%= link_to @text_post.title, text_post_path(@text_post) %></p>
+<p>  <%= content_tag :p, @text_post.post %> | <%= link_to 'Edit', edit_text_post_path(@text_post) %> </p>
+
+<%= link_to "Back", :back %>

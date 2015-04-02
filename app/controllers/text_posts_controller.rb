@@ -4,7 +4,7 @@ class TextPostsController < ApplicationController
   def index
     @text_posts = TextPost.all
   end
-end
+
   def show
     @text_post = TextPost.find(params[:id])
     
@@ -54,7 +54,7 @@ end
   def text_post_params
     params.require(:text_post).permit(:post, :title)
   end
-
+end
 end
 
 
