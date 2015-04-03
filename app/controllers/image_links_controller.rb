@@ -5,9 +5,6 @@ class ImageLinksController < ApplicationController
   end
   end
   
-  def image_links
-  @image_links = ImageLink.all
-end
   
   def show
     @image_link = ImageLink.find(params[:id])

@@ -1,3 +1,5 @@
-<% @image_links.each do |image_link| %>
+<p>
+  <% image_links.new do |image_link| %>
   <%= content_tag :p, image_link.url %>
 <% end %>
+</p>
